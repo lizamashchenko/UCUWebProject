@@ -9,6 +9,38 @@ html, body {
   width: 80%;
   margin: 0 auto;
   box-sizing: border-box;
+  position: relative;
+}
+.page #bottom-left, .page #middle-left, .page #middle-right, .page #top-left {
+  position: absolute;
+}
+.page #top-left {
+  top: 0;
+  left: -20%;
+  height: 550px;
+  width: 40%;
+  z-index: -1;
+}
+.page #middle-left {
+  left: -20%;
+  top: 67%;
+  height: 1000px;
+  width: 60%;
+  z-index: -1;
+}
+.page #middle-right {
+  right: -20%;
+  top: 25%;
+  height: 1000px;
+  width: 70%;
+  z-index: -1;
+}
+.page #bottom-left {
+  bottom: 0;
+  right: -20%;
+  height: 1000px;
+  width: 70%;
+  z-index: -1;
 }
 
 div, nav, footer, header {
@@ -110,8 +142,8 @@ input {
 }
 
 .slider-dot {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 32px;
   border: none;
   background-color: #e0e3eb;
@@ -174,7 +206,27 @@ input {
   transform: translateY(-0.2rem);
 }
 
+.orange-text-2 {
+  font-family: Lexend;
+  font-size: 14px;
+  font-weight: 600;
+  color: #f59e0b;
+  position: relative;
+  padding-top: 5px;
+}
+
+.orange-text-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc((100% - 40px) / 2);
+  width: 40px;
+  height: 1px;
+  background-color: #f59e0b;
+}
+
 .section-header-text {
+  margin-left: 40px;
   color: #1b1c57;
   font-family: Lexend;
   font-size: 32px;
@@ -333,30 +385,34 @@ header {
 }
 header .header-info, header .header-menu {
   padding-top: 20px;
+  min-height: 720px;
 }
 header .header-info {
   flex: 1;
   width: 50%;
 }
 header .header-info .company-info {
-  margin-top: 70px;
+  margin-top: 100px;
   align-items: flex-start;
 }
 header .header-info .company-info .motto-regular-text, header .header-info .company-info .special-text {
   font-family: "Lexend";
   font-size: 40px;
-  font-weight: 600;
+  font-weight: 700;
   margin: 0 0 0 0;
+  color: #1B1C57;
+  text-shadow: 1px 1px 0 #1B1C57, 1px 1px 0 #1B1C57, 1px 1px 0 #1B1C57, 1px 1px 0 #1B1C57;
 }
 header .header-info .company-info .special-text {
   color: white;
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  text-shadow: -1px -1px 0 #1B1C57, 1px -1px 0 #1B1C57, -1px 1px 0 #1B1C57, 1px 1px 0 #1B1C57;
 }
 header .header-info .company-info .small-grey-text {
-  margin-top: 32px;
+  margin-top: 60px;
+  max-width: 500px;
 }
 header .header-info .header-search {
-  margin: 20px 0 20px 0;
+  margin: 30px 0 20px 0;
   align-items: flex-start;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -364,8 +420,12 @@ header .header-info .header-search {
 header .header-info .header-search .green-button {
   margin-left: -80px;
 }
+header .header-info .header-search input {
+  max-width: 500px;
+}
 header .header-info .partnership {
   align-items: flex-start;
+  margin-top: 50px;
 }
 header .header-info .partnership .logos-slider {
   flex-direction: row;
@@ -375,10 +435,12 @@ header .header-info .partnership .logos-slider img {
 }
 header .header-menu {
   flex: 1;
-  overflow-x: visible;
+  overflow-x: hidden;
+  overflow-y: hidden;
   background-image: url("../images/header-background.png");
   background-size: cover;
-  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-position: bottom -80px left;
   border-radius: 0 0 0 50px;
   z-index: -1;
   width: 50%;
@@ -438,12 +500,16 @@ header .header-menu::before {
   top: 20px;
   left: 0;
   width: 110%;
-  height: 494px;
+  height: 100%;
+  overflow: visible;
   background: linear-gradient(to bottom, rgba(12, 21, 55, 0) 0%, rgb(12, 21, 55) 100%); /* Apply the linear gradient */
   border-radius: 0 0 0 50px;
   z-index: -1;
 }
 
+.recommendations {
+  margin-top: 150px;
+}
 .recommendations .recommendations-navigation {
   flex-direction: row;
   justify-content: space-evenly;
@@ -454,13 +520,13 @@ header .header-menu::before {
 }
 .recommendations .recommendations-navigation .slider-controls {
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
 }
 .recommendations .recommendations-navigation .slider-controls button:not(:last-child) {
   margin-right: 5px;
 }
 .recommendations .offers-slider {
-  margin-top: 15px;
+  margin-top: 40px;
   flex-direction: row;
   overflow: hidden;
 }
@@ -473,14 +539,15 @@ header .header-menu::before {
 .recommendations .offers-slider .offer-short .offer-image {
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 340px;
+  margin-bottom: 20px;
   border-radius: 32px;
 }
 .recommendations .offers-slider .offer-short .offer-image img {
   position: absolute;
   bottom: 10px;
   left: 10px;
-  height: 24px;
+  height: 40px;
   width: auto;
 }
 .recommendations .offers-slider .offer-short .main-info {
@@ -504,6 +571,7 @@ header .header-menu::before {
 }
 
 .offer {
+  margin-top: 50px;
   flex-direction: row;
 }
 .offer .offer-info {
@@ -511,9 +579,15 @@ header .header-menu::before {
 }
 .offer .offer-info .offer-description {
   align-items: flex-start;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.offer .offer-info .offer-description p {
+  max-width: 522px;
 }
 .offer .offer-info .offer-details {
   align-items: flex-start;
+  margin-bottom: 50px;
 }
 .offer .offer-info .offer-details table {
   width: 100%;
@@ -535,6 +609,10 @@ header .header-menu::before {
   margin: 0 0 0 5px;
 }
 .offer .offer-info .user-full {
+  border-top: solid 2px #F0F3FD;
+  padding-top: 10px;
+  max-width: 540px;
+  align-self: flex-start;
   flex-direction: row;
 }
 .offer .offer-info .user-full .user-contact button {
@@ -602,33 +680,18 @@ header .header-menu::before {
 }
 
 .reviews {
-  margin-top: 30px;
+  margin-top: 80px;
 }
 .reviews .section-header {
   align-items: center;
-}
-.reviews .section-header .orange-text-2 {
-  font-family: Lexend;
-  font-size: 14px;
-  font-weight: 600;
-  color: #f59e0b;
-  position: relative;
-  padding-top: 5px;
-}
-.reviews .section-header .orange-text-2::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 33%;
-  width: 33%;
-  height: 1px;
-  background-color: #f59e0b;
+  margin-bottom: 30px;
 }
 .reviews .reviews-slider {
   flex-direction: row;
   justify-content: center;
   position: relative;
   height: 505px;
+  margin-bottom: 40px;
 }
 .reviews .reviews-slider .review {
   display: grid;
@@ -639,7 +702,7 @@ header .header-menu::before {
 }
 .reviews .reviews-slider .review .review-image {
   background-image: url("../images/exterior1.png");
-  background-size: contain;
+  background-size: cover;
   border-radius: 8px;
   width: 100%;
   height: 350px;
@@ -696,11 +759,14 @@ header .header-menu::before {
 }
 
 .articles {
-  margin-top: 30px;
+  margin-top: 60px;
+}
+.articles .articles-header {
+  margin-bottom: 20px;
 }
 .articles .articles-header .section-header {
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .articles .articles-main {
   margin-top: 15px;
@@ -712,7 +778,7 @@ header .header-menu::before {
 }
 .articles .articles-main .article-short {
   flex-direction: row;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 .articles .articles-main .article-short .article-image {
   height: 148px;
@@ -728,7 +794,7 @@ header .header-menu::before {
   align-items: flex-start;
 }
 .articles .articles-main .article-full {
-  margin-left: 10px;
+  margin-left: 50px;
 }
 .articles .articles-main .article-full .article-image {
   height: 280px;
@@ -737,7 +803,7 @@ header .header-menu::before {
 }
 .articles .articles-main .article-full .article-image img {
   height: 100%;
-  width: auto;
+  width: 560px;
   border-radius: 16px;
 }
 .articles .articles-main .article-full .article-full-info {
@@ -753,6 +819,7 @@ header .header-menu::before {
 }
 
 .subscribe {
+  margin-top: 60px;
   background-image: url("../images/subscribe-background.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -791,6 +858,7 @@ header .header-menu::before {
 }
 
 footer {
+  margin-top: 60px;
   height: 180px;
   flex-direction: row;
   justify-content: space-between;
