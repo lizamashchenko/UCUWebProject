@@ -3,299 +3,459 @@
 <head>
     <meta charset="UTF-8">
     <title>Dobrii den`</title>
+    <link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />    <link href="style/style_s.css" rel="stylesheet">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
 </head>
 <body>
-<div class="header" id="header">
-    <div class="header_info">
+<div class="page">
+<header>
+    <div class="header-info">
         <div class="logo">
-            <img src="images/logo.png" alt="company logo">
-            <h3>Company name</h3>
+            <img src="images/logo/logo-company.png" alt="company logo">
         </div>
-        <div class="company_info">
-            <h1>Company motto</h1>
-            <h4>Some longer description text here</h4>
+        <div class="company-info">
+            <p class="motto-regular-text">Find The Place To</p>
+            <p class="motto-regular-text">Live <span class="special-text">Your Dreams</span></p>
+            <p class="motto-regular-text">Easily Here</p>
+            <p class="small-grey-text">Everything you need about finding your place to live
+            will be here, where it will be easier for you</p>
         </div>
-        <div class="header_search">
-            <label>
-                <input type="text" id="search-field" name="search-input" placeholder="What are you looking for">
-            </label>
+        <div class="header-search">
+            <input type="text" id="search-field" name="search-input" placeholder="Search for the location you want!">
+            <button class="green-button" type="button">Search <i class="arrow right"></i></button>
         </div>
         <div class="partnership">
-            <h3>Partnership</h3>
-            <div class="logos_slider">
-                <img src="images/logo.png" alt="company logo">
+            <p class="small-grey-text">Our Partnership</p>
+            <div class="logos-slider">
+                <img class="partner-logo" src="images/logo/logo-traveloka.png" alt="logo traveloka">
+                <img class="partner-logo" src="images/logo/logo-tiket.png" alt="logo tiket">
+                <img class="partner-logo" src="images/logo/logo-airbnb.png" alt="logo airbnb">
+                <img class="partner-logo" src="images/logo/logo-tripadvisor.png" alt="logo tripadvisor">
             </div>
         </div>
     </div>
-    <div class="header_menu">
-        <div class="navigation">
-            <ul>
-                <li><a href="#anchor">Section</a></li>
-                <li><a href="#anchor">Section</a></li>
-                <li><select>
-                        <option selected = 'Section' value="all">default</option>
-                        <option value="1">option 1</option>
-                        <option value="2">option 2</option>
-                        <option value="3">option 3</option>
-                        <option value="4">option 4</option>
-                    </select>
-                </li>
-                <li><a href="#anchor">Section</a></li>
-            </ul>
-        </div>
-        <div class="flex_block">
-            <img src="images/pic.png" alt="some pretty picture">
-            <div class="flex_slider">
-                <div class="flex">
-                    <img src="images/pic.png" alt="some flex pic">
-                    <h3>title</h3>
-                    <h6>some small text</h6>
-                </div>
-                <div class="flex">
-                    <div class="flex_icons">
-                        <img src="images/pic.png" alt="some flex pic">
+    <div class="header-menu">
+        <nav class="site-navigation">
+            <button class="regular-button" type="button">About us</button>
+            <button class="regular-button" type="button">Article</button>
+            <select class="regular-button">
+                    <option selected = 'Property' value="all">Property</option>
+                    <option value="1">option 1</option>
+                    <option value="2">option 2</option>
+                    <option value="3">option 3</option>
+                    <option value="4">option 4</option>
+            </select>
+            <button class="transparent-green-button" type="button">Sign Up!</button>
+        </nav>
+        <div class="flex-block">
+            <div class="flex-slider">
+                <div id="flex-buyers" class="flex">
+                    <div class="flex-icons">
+                        <img class="user-icon" src="images/users/user1.png" alt="some flex pic">
+                        <img class="user-icon" src="images/users/user2.png" alt="some flex pic">
+                        <img class="user-icon" src="images/users/user3.png" alt="some flex pic">
                     </div>
-                    <div class="flex_info">
-                        <h3>title</h3>
-                        <h6>some small text</h6>
+                    <div class="flex-info">
+                        <p class="regular-black-text">1K+ People</p>
+                        <p class="smaller-grey-text">Successfully Getting Home</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="main_section">
-    <div class="recommendations">
-        <div class="recommendations_navigation">
-            <div class="section_header">
-                <h4>Section title</h4>
-                <h2>Section header</h2>
-            </div>
-            <div class="type_selector">
-                <button>Type</button>
-                <button>Type</button>
-                <button>Type</button>
-            </div>
-            <div class="slider_controls">
-                <button>Left</button>
-                <button>Right</button>
-            </div>
-        </div>
-        <div class="offers_slider">
-            <div class="offer_short">
-                <div class="offer_image">
-                    <img src="images/pic.png" alt="offer picture">
-                    <div class="tag">
-                        <img src="images/icon.png" alt="popular tag">
+                <div id="flex-sold" class="flex">
+                    <div class="flex-icons">
+                        <img class="user-icon" src="images/users/house.png" alt="some flex pic">
+                    </div>
+                    <div class="flex-info">
+                        <p class="regular-black-text">56 Houses</p>
+                        <p class="smaller-grey-text">Sold Monthly</p>
                     </div>
                 </div>
-                <div class="main_info">
-                    <h2>Title</h2>
-                    <h5>Price</h5>
-                </div>
-                <div class="user_short">
-                    <div class="user_image">
-                        <img src="images/icon.png" alt="user picture">
+                <div id="flex-something" class="flex">
+                    <div class="flex-icons">
+                        <img class="user-icon" src="images/users/user4.png" alt="some flex pic">
                     </div>
-                    <div class="user_info">
-                        <h2>Name Surname</h2>
-                        <h5>Location</h5>
+                    <div class="flex-info">
+                        <p class="regular-black-text">4K</p>
+                        <p class="smaller-grey-text">Pe</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="offer">
-        <div class="offer_info">
-            <div class="section_header">
-                <h4>Section title</h4>
-                <h2>Section header</h2>
+</header>
+<div class="recommendations">
+        <div class="recommendations-navigation">
+            <div class="section-header">
+                <p class="orange-text">Our Recommendation</p>
+                <p class="section-header-text">Featured House</p>
             </div>
-            <div class="offer_description">
-                <h3>Some description here</h3>
+            <div class="type-selector">
+                <button class="type-select" type="button"><span class="house-icon"></span>House</button>
+                <button class="type-select" type="button"><span class="villa-icon"></span>Villa</button>
+                <button class="type-select" type="button"><span class="apartment-icon"></span>Apartment</button>
             </div>
-            <div class="offer_details">
+            <div class="slider-controls">
+                <button class="slider-button" type="button"><i class="arrow-black left"></i></button>
+                <button class="slider-button" type="button"><i class="arrow-white right"></i></button>
+            </div>
+        </div>
+        <div class="offers-slider">
+            <div class="offer-short">
+                <div class="offer-image">
+                    <img src="images/tags/tag-popular.png" alt="popular tag">
+                </div>
+                <div class="main-info">
+                    <p class="middle-black-text">Roselands House</p>
+                    <p class="price-text">$ 35.000.000</p>
+                </div>
+                <div class="user-short">
+                    <div class="user-icon">
+                        <img class="user-icon" src="images/users/user4.png" alt="user picture">
+                    </div>
+                    <div class="user-info">
+                        <p class="regular-black-text">Dianne Russell</p>
+                        <p class="small-grey-text">Manchester, Kentucky</p>
+                    </div>
+                </div>
+            </div>
+            <div class="offer-short">
+                <div class="offer-image">
+                    <img src="images/tags/tag-new.png" alt="popular tag">
+                </div>
+                <div class="main-info">
+                    <p class="middle-black-text">Woodlandside</p>
+                    <p class="price-text">$ 20.000.000</p>
+                </div>
+                <div class="user-short">
+                    <div class="user-icon">
+                        <img class="user-icon" src="images/users/user3.png" alt="user picture">
+                    </div>
+                    <div class="user-info">
+                        <p class="regular-black-text">Robert Fox</p>
+                        <p class="small-grey-text">Dr. San Jose, South Dakota</p>
+                    </div>
+                </div>
+            </div>
+            <div class="offer-short">
+                <div class="offer-image">
+                    <img src="images/tags/tag-best.png" alt="popular tag">
+                </div>
+                <div class="main-info">
+                    <p class="middle-black-text">The Old Lighthouse</p>
+                    <p class="price-text">$ 44.000.000</p>
+                </div>
+                <div class="user-short">
+                    <div class="user-icon">
+                        <img class="user-icon" src="images/users/user2.png" alt="user picture">
+                    </div>
+                    <div class="user-info">
+                        <p class="regular-black-text">Ronald Richards</p>
+                        <p class="small-grey-text">Santa Ana, Illinois</p>
+                    </div>
+                </div>
+            </div>
+            <div class="offer-short">
+                <div class="offer-image">
+                    <img src="images/tags/tag-popular.png" alt="popular tag">
+                </div>
+                <div class="main-info">
+                    <p class="middle-black-text">Cosmo's House</p>
+                    <p class="price-text">$ 22.000.000</p>
+                </div>
+                <div class="user-short">
+                    <div class="user-icon">
+                        <img class="user-icon" src="images/users/user1.png" alt="user picture">
+                    </div>
+                    <div class="user-info">
+                        <p class="regular-black-text">Jenny Wilson</p>
+                        <p class="small-grey-text">Preston Rd., Kentucky</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="offer">
+        <div class="offer-info">
+            <div class="section-header">
+                <p class="orange-text">Ready To Sell!</p>
+                <p class="section-header-text">Let's Tour And See Our House!</p>
+            </div>
+            <div class="offer-description">
+                <p class="small-grey-text">Houses recommended by our partners that have been curated to become the home of your dreams!</p>
+            </div>
+            <div class="offer-details">
+                <p class="bold-grey-text">House Detail</p>
                 <table>
                     <tr>
                         <td>
-                            <img src="images/pic.png" alt="icon">
-                            <h5>Detail</h5>
+                            <div class="table-cell">
+                                <img src="images/icons/icon-bed.png" alt="icon">
+                                <p class="bold-grey-text">4 Bedrooms</p>
+                            </div>
                         </td>
                         <td>
-                            <img src="images/pic.png" alt="icon">
-                            <h5>Detail</h5>
+                            <div class="table-cell">
+                                <img src="images/icons/icon-bathroom.png" alt="icon">
+                                <p class="bold-grey-text">2 Bathrooms</p>
+                            </div>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <img src="images/pic.png" alt="icon">
-                            <h5>Detail</h5>
+                            <div class="table-cell">
+                                <img src="images/icons/icon-carport.png" alt="icon">
+                                <p class="bold-grey-text">1 Carport</p>
+                            </div>
                         </td>
                         <td>
-                            <img src="images/pic.png" alt="icon">
-                            <h5>Detail</h5>
+                            <div class="table-cell">
+                                <img src="images/icons/icon-floor.png" alt="icon">
+                                <p class="bold-grey-text">2 Floors</p>
+                            </div>
                         </td>
                     </tr>
                 </table>
             </div>
-            <div class="user_full">
+            <div class="user-full">
                 <div class="user-icon">
-                    <img src="images/icon.png" alt="user profile picture">
+                    <img class="user-icon" src="images/users/user2.png" alt="user profile picture">
                 </div>
-                <div class="user-info-2">
-                    <h2>Name Surname</h2>
-                    <h5>Position</h5>
+                <div class="user-info">
+                    <p class="regular-black-text">Dianne Russel</p>
+                    <p class="small-grey-text">Manager Director</p>
                 </div>
                 <div class="user-contact">
-                    <button type="button">Contact</button>
+                    <button class="green-button" type="button"><span class="material-symbols-outlined">call</span>Contact Now</button>
                 </div>
             </div>
         </div>
-        <div class="offer_gallery">
-            <div class="offer_video">
-                <video controls>
-                    <source src="movie.mp4" type="video/mp4">
+        <div class="offer-gallery">
+            <div class="offer-video">
+                <video id="videoPlayer">
+                    <source src="images/video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <button class="play-button"></button>
             </div>
-            <div class="offer_pictures">
-                <img src="images/pic.png" alt="offer picture">
-                <img src="images/pic.png" alt="offer picture">
-                <img src="images/pic.png" alt="offer picture">
+            <div class="offer-pictures">
+                <img src="images/interior1.png" alt="offer picture">
+                <img src="images/interior2.png" alt="offer picture">
+                <img src="images/interior3.png" alt="offer picture">
             </div>
         </div>
     </div>
-</div>
 <div class="reviews">
-    <div class="section_header">
-        <h4>Section title</h4>
-        <h2>Section header</h2>
+    <div class="section-header">
+        <p class="orange-text-2">See Our Review</p>
+        <p class="section-header-text">What Our User Say About Us</p>
     </div>
     <div class="reviews-slider">
         <div class="review">
-            <img src="images/pic.png" alt="some pretty picture">
-            <div class="review-info">
-                <div class="review-text">
-                    <h5>Review header</h5>
-                    <p>Some regular text over here</p>
+            <div class="review-image"></div>
+            <div class="review-text">
+                <div class="review-info">
+                    <p class="bold-black-text">Best! I Got The House I Wanted Through Hounter</p>
+                    <p class="small-grey-text">Through this website I can get a house with the type and specifications I want very easily, without a complicated process to be able to find information on the house we want.</p>
+                </div>
+                <div class="review-overview">
+                    <div class="user-short">
+                        <div class="user-icon">
+                            <img class="user-icon" src="images/users/user2.png" alt="user icon">
+                        </div>
+                        <div class="user-info">
+                            <p class="regular-black-text">Dianne Russel</p>
+                            <p class="small-grey-text">Manager Director</p>
+                        </div>
+                    </div>
+                    <div class="review-score">
+                        <img src="images/icons/icon-star.png" alt="rating star">
+                        <p class="bold-black-text">4.6</p>
+                    </div>
                 </div>
             </div>
-            <div class="review-overview">
-                <div class="user-short">
-                    <div class="user_icon">
-                        <img src="images/icon.png" alt="user icon">
+        </div>
+        <div class="review">
+            <div class="review-image"></div>
+            <div class="review-text">
+                <div class="review-info">
+                    <p class="bold-black-text">Best! I Got The House I Wanted Through Hounter</p>
+                    <p class="small-grey-text">Through this website I can get a house with the type and specifications I want very easily, without a complicated process to be able to find information on the house we want.</p>
+                </div>
+                <div class="review-overview">
+                    <div class="user-short">
+                        <div class="user-icon">
+                            <img class="user-icon" src="images/users/user4.png" alt="user icon">
+                        </div>
+                        <div class="user-info">
+                            <p class="regular-black-text">Dianne Russel</p>
+                            <p class="small-grey-text">Manager Director</p>
+                        </div>
                     </div>
-                    <div class="user-info-2">
-                        <h2> Name Surname</h2>
-                        <h4>Position</h4>
+                    <div class="review-score">
+                        <img src="images/icons/icon-star.png" alt="rating star">
+                        <p class="bold-black-text">4.6</p>
                     </div>
                 </div>
-                <div class="review-score">
-                    <img src="images/icon.png" alt="rating star">
-                    <h5>0.0</h5>
+            </div>
+        </div>
+        <div class="review">
+            <div class="review-image"></div>
+            <div class="review-text">
+                <div class="review-info">
+                    <p class="bold-black-text">Best! I Got The House I Wanted Through Hounter</p>
+                    <p class="small-grey-text">Through this website I can get a house with the type and specifications I want very easily, without a complicated process to be able to find information on the house we want.</p>
+                </div>
+                <div class="review-overview">
+                    <div class="user-short">
+                        <div class="user-icon">
+                            <img class="user-icon" src="images/users/user4.png" alt="user icon">
+                        </div>
+                        <div class="user-info">
+                            <p class="regular-black-text">Dianne Russel</p>
+                            <p class="small-grey-text">Manager Director</p>
+                        </div>
+                    </div>
+                    <div class="review-score">
+                        <img src="images/icons/icon-star.png" alt="rating star">
+                        <p class="bold-black-text">4.6</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="slider-paging">
-        <button type="button">1</button>
-        <button type="button">2</button>
-        <button type="button">3</button>
+        <button class="slider-dot"></button>
+        <button class="slider-dot"></button>
+        <button class="slider-dot"></button>
     </div>
 </div>
 <div class="articles">
     <div class="articles-header">
-        <div class="section_header">
-        <h4>Section title</h4>
-        <h2>Section header</h2>
-    </div>
-        <div class="more-info">
-        <button type="button">More info</button>
-    </div>
+        <div class="section-header">
+            <p class="orange-text">See Tips And Trick From Our Partnership</p>
+            <p class="section-header-text">Find Out More About Selling And Buying Homes</p>
+        </div>
+        <button class="green-button" type="button">More Artikel</button>
     </div>
     <div class="articles-main">
         <div class="all-articles">
             <div class="article-short">
                 <div class="article-image">
-                    <img src="images/pic.png" alt="article picture">
+                    <img src="images/article1.png" alt="article picture">
                 </div>
                 <div class="article-short-info">
                     <div class="user-overview">
-                        <img src="images/icon.png" alt="user icon">
-                        <h4>Name Surname</h4>
+                        <img class="user-icon" src="images/users/user3.png" alt="user icon">
+                        <p class="user-text">Dianne Russell</p>
                     </div>
                     <div class="article-title">
-                        <h4>Article title</h4>
+                        <p class="middle-black-text">The Things We Need To Check When We Want To Buy A House</p>
                     </div>
                     <div class="article-date">
-                        <img src="images/icon.png" alt="time icon">
-                        <p>last modified</p>
+                        <img class="icon-image" src="images/icons/icon-time.png" alt="time icon">
+                        <p class="small-grey-text">4 min read | 25 Apr 2021</p>
+                    </div>
+                </div>
+            </div>
+            <div class="article-short">
+                <div class="article-image">
+                    <img src="images/article2.png" alt="article picture">
+                </div>
+                <div class="article-short-info">
+                    <div class="user-overview">
+                        <img class="user-icon" src="images/users/user4.png" alt="user icon">
+                        <p class="user-text">Courtney Henry</p>
+                    </div>
+                    <div class="article-title">
+                        <p class="middle-black-text">7 Ways To Distinguish The Quality Of The Hosue We Want To Buy</p>
+                    </div>
+                    <div class="article-date">
+                        <img class="icon-image" src="images/icons/icon-time.png" alt="time icon">
+                        <p class="small-grey-text">6 min read | 24 Apr 2021</p>
+                    </div>
+                </div>
+            </div>
+            <div class="article-short">
+                <div class="article-image">
+                    <img src="images/article3.png" alt="article picture">
+                </div>
+                <div class="article-short-info">
+                    <div class="user-overview">
+                        <img class="user-icon" src="images/users/user2.png" alt="user icon">
+                        <p class="user-text">Darlene Robertson</p>
+                    </div>
+                    <div class="article-title">
+                        <p class="middle-black-text">The Best Way To Know The Quality Of The House We Want To Buy</p>
+                    </div>
+                    <div class="article-date">
+                        <img class="icon-image" src="images/icons/icon-time.png" alt="time icon">
+                        <p class="small-grey-text">2 min read | 24 Apr 2021</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="article-full">
             <div class="article-image">
-                <img src="images/pic.png" alt="article image">
+                <img src="images/article4.png" alt="article image">
             </div>
             <div class="user-overview">
-                <img src="images/icon.png" alt="user icon">
-                <h4>Name Surname</h4>
+                <img class="user-icon" src="images/users/user1.png" alt="user icon">
+                <p class="small-regular-text">Darlene Robertson</p>
             </div>
             <div class="article-full-info">
-                <h5>Article title</h5>
-                <p>Some article description here</p>
+                <p class="middle-black-text">12 Things To Know Before Buying A House</p>
+                <p class="small-grey-text">Want to buy a house but are unsure about what we should know, here I will try to explain what we should know and check when we want to buy a house</p>
             </div>
             <div class="article-date">
-                <img src="images/icon.png" alt="time icon">
-                <p>last modified</p>
+                <img class="icon-image" src="images/icons/icon-time.png" alt="time icon">
+                <p class="small-grey-text">8 min read | 25 Apr 2021</p>
             </div>
         </div>
     </div>
 </div>
 <div class="subscribe">
     <div class="subscribe-header">
-        <h1>Subscribe here</h1>
+        <p class="section-header-text">Subscribe For More Info And Update From Hounter</p>
     </div>
     <div class="subscribe-input">
-        <input type="text" placeholder="Subscribe input">
-        <button type="button">Subscribe</button>
+        <input type="text" placeholder="Your email here">
+        <button class="green-button" type="button">Subscribe Now</button>
     </div>
 </div>
-<div class="footer">
+<footer>
     <div class="about">
         <div class="logo">
-            <img src="images/logo.png" alt="company logo">
-            <h3>Company name</h3>
+            <img src="images/logo/logo-company.png" alt="company logo">
         </div>
-        <div class="about-info">
-            <p>Some text here</p>
-        </div>
+        <p class="small-grey-text">We provide information about properties such as houses, villas and apartments to help people find their dream home</p>
         <div class="socials">
-            <img src="images/logo.png" alt="company logo">
-            <img src="images/logo.png" alt="company logo">
-            <img src="images/logo.png" alt="company logo">
+            <img src="images/logo/logo-facebook.png" alt="company logo">
+            <img src="images/logo/logo-twitter.png" alt="company logo">
+            <img src="images/logo/logo-instagram.png" alt="company logo">
         </div>
     </div>
-    <div class="property">
-        <h1>Header</h1>
-        <a href="https://www.w3schools.com/tags/tag_a.asp">Link</a>
-        <a href="https://www.w3schools.com/tags/tag_a.asp">Link</a>
-        <a href="https://www.w3schools.com/tags/tag_a.asp">Link</a>
+    <div class="links">
+        <div class="property">
+            <p class="regular-black-text">Property</p>
+            <a class="small-grey-text" href="https://www.w3schools.com/tags/tag-a.asp">House</a>
+            <a class="small-grey-text" href="https://www.w3schools.com/tags/tag-a.asp">Apartment</a>
+            <a class="small-grey-text" href="https://www.w3schools.com/tags/tag-a.asp">Villa</a>
+        </div>
+        <div class="footer-article">
+            <p class="regular-black-text">Article</p>
+            <a class="small-grey-text" href="https://www.w3schools.com/tags/tag-a.asp">New Article</a>
+            <a class="small-grey-text" href="https://www.w3schools.com/tags/tag-a.asp">Popular Article</a>
+            <a class="small-grey-text" href="https://www.w3schools.com/tags/tag-a.asp">Most Read</a>
+            <a class="small-grey-text" href="https://www.w3schools.com/tags/tag-a.asp">Tips & Tricks</a>
+        </div>
+        <div class="contacts">
+            <p class="regular-black-text">Contact</p>
+            <p class="small-grey-text">2464 Royal Ln. Mesa, New Jersey 45463</p>
+            <p class="small-grey-text">(671)555-0110</p>
+            <p class="small-grey-text">info@hounter.com</p>
+        </div>
     </div>
-    <div class="footer-article">
-        <h1>Header</h1>
-        <a href="https://www.w3schools.com/tags/tag_a.asp">Link</a>
-        <a href="https://www.w3schools.com/tags/tag_a.asp">Link</a>
-        <a href="https://www.w3schools.com/tags/tag_a.asp">Link</a>
-    </div>
-    <div class="contacts">
-        <h1>Header</h1>
-        <p>House num, Street, State, Postal Code</p>
-        <p>(000)000-00-00</p>
-        <p>email@domain.com</p>
-    </div>
+</footer>
 </div>
 </body>
 </html>
